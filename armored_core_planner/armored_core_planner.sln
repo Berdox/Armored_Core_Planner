@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "armored_core_planner", "armored_core_planner.csproj", "{06F5E185-7AE4-423A-A064-EDF162CE4FF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ac_webscraper", "..\ac_webscraper\ac_webscraper.csproj", "{D0F663B5-95FE-4433-B28B-026701A71596}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06F5E185-7AE4-423A-A064-EDF162CE4FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F5E185-7AE4-423A-A064-EDF162CE4FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F5E185-7AE4-423A-A064-EDF162CE4FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F5E185-7AE4-423A-A064-EDF162CE4FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0F663B5-95FE-4433-B28B-026701A71596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F663B5-95FE-4433-B28B-026701A71596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F663B5-95FE-4433-B28B-026701A71596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F663B5-95FE-4433-B28B-026701A71596}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0BF4464-6BBC-493D-A5DD-871BF942435A}
+	EndGlobalSection
+EndGlobal

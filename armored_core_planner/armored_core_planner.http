@@ -1,0 +1,6 @@
+@armored_core_planner_HostAddress = http://localhost:5150
+
+GET {{armored_core_planner_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: armored_core_postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: armored_core_root_user
+      POSTGRES_DB: armored_core_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: armored_core_pg_admin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@armored.com
+      PGADMIN_DEFAULT_PASSWORD: armored_core_admin_password
+    ports:
+      - "5050:80"
+
+volumes:
+  pgdata:
