@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 using ac_webscraper.models;
 using HtmlAgilityPack;
+using SixLabors.ImageSharp;
 using static ac_webscraper.parsers.TableParser;
 using static ac_webscraper.models.Mech_Collection;
 
 namespace ac_webscraper.parsers.ac3 {
     public class AC3_SubTitle_Parser {
-        private static readonly (List<List<string>> model, AC_Games game)[] ParseMap_AC3_Sub_Title = new[] {
+        private static readonly (List<(Image image, List<string>)> model, AC_Games game)[] ParseMap_AC3_Sub_Title = new[] {
             (ac3_mech.head, AC_Games.ac3_N),
             (ac3_mech.head, AC_Games.ac3_NB),
             (ac3_mech.head, AC_Games.ac3_LR),

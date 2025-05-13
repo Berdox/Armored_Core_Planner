@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 using ac_webscraper.models;
 using HtmlAgilityPack;
+using SixLabors.ImageSharp;
 using static ac_webscraper.parsers.TableParser;
 using static ac_webscraper.models.Mech_Collection;
 
 namespace ac_webscraper.parsers.ac2 {
     public static class AC2_Parser {
 
-        private static readonly (List<List<string>> model, AC_Games game)[] ParseMap_AC2 = new[] {
+        private static readonly (List<(Image image, List<string>)> model, AC_Games game)[] ParseMap_AC2 = new[] {
             (ac2_mech.head, AC_Games.ac2),        
             (ac2_mech.head, AC_Games.ac2_AA),     
             (ac2_mech.core, AC_Games.ac2),         

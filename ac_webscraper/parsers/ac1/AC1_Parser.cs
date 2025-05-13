@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using HtmlAgilityPack;
+using SixLabors.ImageSharp;
+
 using armored_core_planner.Models.ac1;
 using static ac_webscraper.parsers.TableParser;
 using static ac_webscraper.models.Mech_Collection;
@@ -13,7 +15,7 @@ using ac_webscraper.models;
 namespace ac_webscraper.parsers.ac1 {
     public static class AC1_Parser {
 
-        private static readonly (List<List<string>> model, AC_Games game)[] ParseMap_AC1 = new[] {
+        private static readonly (List<(Image image, List<string>)> model, AC_Games game)[] ParseMap_AC1 = new[] {
             (ac1_mech.head, AC_Games.ac1),      
             (ac1_mech.head, AC_Games.ac1_PP),    
             (ac1_mech.head, AC_Games.ac1_MOA),

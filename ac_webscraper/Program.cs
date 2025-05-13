@@ -21,12 +21,12 @@ namespace ac_webscraper {
             var tasks = scrapeJobs.Select(job => ScrapeAndParse(job.Key, job.Value)).ToList();
             await Task.WhenAll(tasks);
 
-            foreach (var headSet in ac1_mech.head) {
+            /*foreach (var headSet in ac1_mech.head) {
                 Console.WriteLine("New Head Set:");
                 foreach (var part in headSet) {
                     Console.WriteLine($" - {part}");
                 }
-            }
+            }*/
 
             Console.WriteLine("Done scraping");
         }

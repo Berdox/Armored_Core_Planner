@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using SixLabors.ImageSharp;
+
 using ac_webscraper.models;
 
 namespace ac_webscraper.parsers {
 
     public static class TableParser {
-        public static void ParseTable(List<List<string>> model, HtmlNode tbody, AC_Games game) {
+        public static void ParseTable(List<(Image image, List<string>)> model, HtmlNode tbody, AC_Games game) {
 
             var rows = tbody.SelectNodes(".//tr");
             if (rows == null) return;
@@ -18,6 +20,7 @@ namespace ac_webscraper.parsers {
             foreach (var row in rows) {
                 // Extract the PartId from the <th> (the first column)
                 List<string> part = new List<string>();
+                Image partImage = new();
                 part.Add(WhichGame(game));
                 var partIdNode = row.SelectSingleNode(".//th/a");
                 part.Add(partIdNode?.InnerText.Trim() ?? "Unknown"); // Default to "Unknown" if no <a> tag is found
@@ -31,7 +34,7 @@ namespace ac_webscraper.parsers {
                     var cellText = cells[i].InnerText.Trim();
                     part.Add(cellText);
                 }
-                model.Add(part);
+                model.Add((partImage, part));
             }
         }
 
